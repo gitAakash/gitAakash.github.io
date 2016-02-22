@@ -155,6 +155,7 @@ namespace aakashPawar.Controllers
                 demo.Google_ID = ar.GetValue(0).ToString();
                 demo.firstName = ar.GetValue(4).ToString();
                 demo.LastName = ar.GetValue(5).ToString();
+                demo.Token = Request.QueryString["access_token"];
             }
             else
             {
@@ -162,7 +163,7 @@ namespace aakashPawar.Controllers
                 demo.Google_ID = "Eeeoe";
                 demo.firstName = "Eeeoe";
                 demo.LastName = "Eeeoe";
-               
+                demo.Token = "Null";
             }
             return View(demo);
         }
